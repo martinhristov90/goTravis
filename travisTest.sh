@@ -1,8 +1,6 @@
 #!/usr/bin/env bash
 
 # This line executes the script that needs to be tests and stores the out in the# variable "output"
-
-go build hello.go
 output=$(./hello)
 
 # we compare output to "hello"
