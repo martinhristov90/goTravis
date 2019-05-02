@@ -5,6 +5,8 @@
 go build hello.go
 output=$(./hello)
 
+echo $output
+
 # we compare output to "hello"
 if [ "${output}" == "hello" ]; then
   # if output match all good
