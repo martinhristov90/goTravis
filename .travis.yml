@@ -1,3 +1,12 @@
 language: go
-
 script: bash travisTest.sh
+
+deploy:
+  provider: releases
+  api_key:
+    secure: 1xAFcA6sQSqfXZ8QlDZr9QNjplTJPsQkjOqBSjsPRSkJ0zofehqRkxkqGREoAsWN+90nQdS1/io18yGlwxbHaDXPUOdqsWm/sFZWzCjyA7PMLdr0kvMHXjn3rt2H7ewutv0bdXc4v5JlLq0Vo5KrWHRKllmznvRBCGFQhKXqU0Ae1ztOaIgIEslqdYchup11+1xcjVdGFPxn8zpneYznIcXK6Gh05smYC1lH0p3Vasd/TQvbMIy5v45TWMUQePbJJN4eKrs3h7QxiHaZuRoK8dcnVldYT+CjLQYlaCMipK9zmt3Bgez97mtUg5AJDkEzJtVcmjL8ZD+dKVTyZc+FBUMMKd9SGVm01JxeViM73m9ssXCkGW6ZV3I+lsVuPop8d78p4D0Fq7wmtJ+u7aXEVFjb3L2GrVJSrquuaxk3NMhK51rbplP16fpnW1JujooOAfJ4gaKr/XrrHSRhM9RNb7sUp2o6H3vtiS7sq4PrrURr/Kfvnp2Q/9/vqBQGtcCO+NVHfCyLuvovB7FvPPAhs4y+3CXb2ZIWZKkTiyuzLfgFxAV9oYJIFQ4jzprDIiMv7j6hKl0xVEXSLOLl1K9wc9F7briyxJoJX5eAi0ew53znI7lPgnieIOFOA4JQQnxEbT67B2thKS3YnteXjXTv4sbvRttySoP5wv1+HpXtZHU=
+  file: hello
+  on:
+    repo: martinhristov90/goTravis
+    tags: true
+  skip_cleanup: true
